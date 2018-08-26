@@ -19,11 +19,11 @@ void setup() {
 void loop() {
 {
   digitalWrite(ENABLE_PHONE_CHARGE_PIN, LOW);       // Turns the Power boost board off by setting the LB pin to High
-  delay(1000);                  // waits for a second
-  Serial.println("turn off power boost"); // print turn off powerboost
+  delay(1000);                                      // waits for a second
+  Serial.println("turn off power boost");           // print turn off powerboost
 }
 
-  int sensorValue = analogRead(BATT_VOLTAGE_PIN); //reads battery voltage 
+  int sensorValue = analogRead(BATT_VOLTAGE_PIN);   //reads battery voltage 
   delay(20);
   //batteryVoltage = analogRead(BATT_VOLTAGE_PIN);
   float batteryVoltage = (sensorValue * (0.00488281));
@@ -56,20 +56,3 @@ if (batteryVoltage < BATTERY_VOLTAGE) //if voltage not OK, turn off circuit.
   
 }
 
-/*
-Test program to see if the TPL_5110 is working
-
-//Triggers the done pin on the TPL5111
-void turnOffCircuit()
-{
-  // toggle DONE so TPL knows to cut power!
-  Serial.println("turnOffCircuit running and Switching Off");
-  while (1) {
-    digitalWrite(DONEPIN, HIGH);
-    delay(1);
-    digitalWrite(DONEPIN, LOW);
-    delay(1);
-  }
- 
-}
-*/
