@@ -1,5 +1,5 @@
-v/*
-
+/*
+Remote cam code for Arduino
 */
 
 // the setup routine runs once when you press reset:
@@ -26,7 +26,8 @@ void loop() {
   pinMode(SLEEP_PIN, OUTPUT); //Sends circuit to sleep
   pinMode(SWITCH_PHONE_ON, OUTPUT); //Switches phone on
   pinMode(LED_BUILTIN, OUTPUT);// initialize digital pin LED_BUILTIN as an output
- 
+
+ //digitalWrite(
  
   // read the input on analog pin A0 (battery voltage):
   int sensorValue = analogRead(BATT_VOLTAGE_PIN);
